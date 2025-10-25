@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>Alshayma Alarfaj</title>
+    <link rel = "stylesheet" href = "css/styles.css">
+</head>
+<body>
+    <nav><a href="#about-me">About Me</a> <a href="#projects">Projects</a> <a href="#contact">Contact</a></nav>
+    <main>
+    <section id = "about-me">
+        <h1>Alshayma Alarfaj</h1>
+        <hr>
+        <br>
+        <h1 id="about-me">About Me</h1>
+        <div id="intro">
+            <div class="column-half_em">
+                <img id = "my_picture" src = "assets/images/my_picture.jpeg" alt = "A picture of me">
+                <p>Turning ideas into apps people actually enjoy</p>
+            </div>
+            <p id="intro-text">Hello! I am Alshayma Alarfaj, a junior-year computer science student at KFUPM. I love making video games and fun, useful websites in my free time. I know how to make videogames, websites and mobile applications, both the front-end aspect and the backend.</p>
+        </div>
+    </section>
+
+    <section id = "projects">
+        <h1 id="projects">Projects</h1>
+        <div class="center-horizontal">
+            <div id="projects-grid">
+                <div class="project-column">
+                    <img src="assets/images/squirtle.png">
+                    <h3>Pokemon Game</h3>
+                    <p>A simple pokemon game built with HTML, CSS, JS. The user can choose which starter pokemon they want and they get to battle their rival.</p>
+                </div>
+                <div class="project-column">
+                    <img src="assets/images/pen.jpg">
+                    <h3>Study Web app</h3>
+                    <p>A simple study app built with HTML, CSS, JS, Python. AI was utilized to build the product quickly. It revolves around the question-answer study method.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id = "contact">
+        <h1 id="contact">Contact</h1>
+        <form id = "contact-form" method = "POST">
+            <p id="contact-prompt">Feel free to contact me by filling up this form:</p>
+
+            <div class="form-input-row">
+                <label for="name">Name</label>
+                <input type = "text" name="name" id="name">
+            </div>
+            <div class="form-input-row">
+                <label for="email">Email</label>
+                <input type = "text" name="email" id="email">
+            </div>
+            <div class="form-input-row">
+                <label for="message">Message</label>
+                <textarea rows=10 name="message" id="message"></textarea>
+            </div> 
+        
+            <button id="submit-contact" type="submit">Submit</button>
+        </form>
+    </section>
+    </main>
+    <button id="theme-toggle" type="button" aria-label="Toggle color mode">
+        <svg class="icon sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="2" x2="12" y2="5"></line>
+            <line x1="12" y1="19" x2="12" y2="22"></line>
+            <line x1="4.22" y1="4.22" x2="6.34" y2="6.34"></line>
+            <line x1="17.66" y1="17.66" x2="19.78" y2="19.78"></line>
+            <line x1="2" y1="12" x2="5" y2="12"></line>
+            <line x1="19" y1="12" x2="22" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="6.34" y2="17.66"></line>
+            <line x1="17.66" y1="6.34" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="icon moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z"></path>
+        </svg>
+    </button>
+    <script src="js/script.js"></script>
+</body>
+</html>
