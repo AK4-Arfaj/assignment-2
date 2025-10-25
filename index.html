@@ -7,7 +7,7 @@
     <link rel = "stylesheet" href = "css/styles.css">
 </head>
 <body>
-    <nav><a href="#about-me">About Me</a> <a href="#projects">Projects</a> <a href="#contact">Contact</a></nav>
+    <nav><a href="#about-me">About Me</a> <a href="#interests">Interests</a> <a href="#skills">Skills</a> <a href="#projects">Projects</a> <a href="#books">Books</a> <a href="#contact">Contact</a></nav>
     <main>
     <!-- Real-time Clock Section -->
     <section id="clock-section">
@@ -25,29 +25,240 @@
     </section>
     
     <section id = "about-me">
-        <h1>Alshayma Alarfaj</h1>
-        <hr>
         <br>
         <h1 id="about-me">About Me</h1>
         <div id="intro">
-            <p>Turning ideas into apps people actually enjoy</p>
+            <p id="bold-dif">Turning ideas into apps people actually enjoy</p>
             <p id="intro-text">Hello! I am Alshayma Alarfaj, a junior-year computer science student at KFUPM. I love making video games and fun, useful websites in my free time. I know how to make videogames, websites and mobile applications, both the front-end aspect and the backend.</p>
+        </div>
+    </section>
+
+    <section id="interests">
+        <h1>My Interests</h1>
+        <div class="interests-grid">
+            <div class="interest-card">
+                <div class="interest-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                </div>
+                <h3>Web Development</h3>
+                <p>Creating responsive and interactive websites with modern technologies</p>
+            </div>
+            <div class="interest-card">
+                <div class="interest-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17 19H7V5h10v14zm-5-11c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+                    </svg>
+                </div>
+                <h3>App Development</h3>
+                <p>Building mobile applications that solve real-world problems</p>
+            </div>
+            <div class="interest-card">
+                <div class="interest-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+                    </svg>
+                </div>
+                <h3>Game Development</h3>
+                <p>Crafting engaging and immersive gaming experiences</p>
+            </div>
+            <div class="interest-card">
+                <div class="interest-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
+                    </svg>
+                </div>
+                <h3>Cybersecurity</h3>
+                <p>Protecting digital assets and ensuring secure systems</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h1>My Skills</h1>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <span>HTML</span>
+            </div>
+            <div class="skill-card">
+                <span>CSS</span>
+            </div>
+            <div class="skill-card">
+                <span>JavaScript</span>
+            </div>
+            <div class="skill-card">
+                <span>React</span>
+            </div>
+            <div class="skill-card">
+                <span>SQL</span>
+            </div>
+            <div class="skill-card">
+                <span>R</span>
+            </div>
+            <div class="skill-card">
+                <span>Python</span>
+            </div>
+            <div class="skill-card">
+                <span>Java</span>
+            </div>
+            <div class="skill-card">
+                <span>Flask</span>
+            </div>
+            <div class="skill-card">
+                <span>Flutter</span>
+            </div>
+            <div class="skill-card">
+                <span>Godot</span>
+            </div>
+            <div class="skill-card">
+                <span>PowerPoint</span>
+            </div>
+            <div class="skill-card">
+                <span>Word</span>
+            </div>
         </div>
     </section>
 
     <section id = "projects">
         <h1 id="projects">Projects</h1>
+        <div class="search-container">
+            <input type="text" id="project-search" placeholder="Search projects..." autocomplete="off">
+            <span class="search-icon">🔍</span>
+        </div>
         <div class="center-horizontal">
             <div id="projects-grid">
-                <div class="project-column">
+                <div class="project-column" data-keywords="pokemon game html css js javascript starter battle rival">
                     <img src="assets/images/squirtle.png">
                     <h3>Pokemon Game</h3>
                     <p>A simple pokemon game built with HTML, CSS, JS. The user can choose which starter pokemon they want and they get to battle their rival.</p>
                 </div>
-                <div class="project-column">
+                <div class="project-column" data-keywords="study web app html css js javascript python ai question answer method">
                     <img src="assets/images/pen.jpg">
                     <h3>Study Web app</h3>
                     <p>A simple study app built with HTML, CSS, JS, Python. AI was utilized to build the product quickly. It revolves around the question-answer study method.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="books">
+        <h1 id="books">Books Read</h1>
+        <div class="search-container">
+            <input type="text" id="book-search" placeholder="Search books..." autocomplete="off">
+            <span class="search-icon">🔍</span>
+        </div>
+        <div class="center-horizontal">
+            <div id="books-grid">
+                <div class="book-column" data-keywords="harry potter sorcerer stone philosopher jk rowling fantasy magic wizard hogwarts" data-isbn="9780439708180" data-book-id="hp1">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='250'%3E%3C/svg%3E" alt="" class="book-cover loading">
+                    <h3 class="skeleton title">Harry Potter and the Sorcerer's Stone</h3>
+                    <p class="author skeleton author">by J.K. Rowling</p>
+                    <p class="skeleton description">The magical journey begins as Harry discovers he's a wizard and enters Hogwarts School of Witchcraft and Wizardry.</p>
+                    <button class="tbr-btn" data-book-id="hp1">
+                        <span class="tbr-text">Add to TBR</span>
+                        <span class="tbr-icon">✓</span>
+                    </button>
+                </div>
+                                                                <div class="book-column" data-keywords="harry potter chamber secrets jk rowling fantasy magic wizard hogwarts" data-isbn="9780439064873" data-book-id="hp2">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='250'%3E%3C/svg%3E" alt="" class="book-cover loading">
+                    <h3 class="skeleton title">Harry Potter and the Chamber of Secrets</h3>
+                    <p class="author skeleton author">by J.K. Rowling</p>
+                    <p class="skeleton description">Harry returns to Hogwarts to face the mystery of the Chamber of Secrets and the monster within.</p>
+                    <button class="tbr-btn" data-book-id="hp2">
+                        <span class="tbr-text">Add to TBR</span>
+                        <span class="tbr-icon">✓</span>
+                    </button>
+                </div>
+                <div class="book-column" data-keywords="harry potter prisoner azkaban jk rowling fantasy magic wizard hogwarts sirius" data-isbn="9780439136365" data-book-id="hp3">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='250'%3E%3C/svg%3E" alt="" class="book-cover loading">
+                    <h3 class="skeleton title">Harry Potter and the Prisoner of Azkaban</h3>
+                    <p class="author skeleton author">by J.K. Rowling</p>
+                    <p class="skeleton description">Harry's third year at Hogwarts brings new dangers as an escaped prisoner threatens his safety.</p>
+                    <button class="tbr-btn" data-book-id="hp3">
+                        <span class="tbr-text">Add to TBR</span>
+                        <span class="tbr-icon">✓</span>
+                    </button>
+                </div>
+                <div class="book-column" data-keywords="harry potter prisoner azkaban jk rowling fantasy magic wizard hogwarts sirius" data-isbn="9780439136365" data-book-id="hp3">
+                    <img src="assets/images/placeholder-book.jpg" alt="Harry Potter and the Prisoner of Azkaban" class="book-cover">
+                    <h3>Harry Potter and the Prisoner of Azkaban</h3>
+                    <p class="author">by J.K. Rowling</p>
+                    <p>Harry learns about his past while a dangerous prisoner escapes from the wizarding prison of Azkaban.</p>
+                    <button class="tbr-btn" data-book-id="hp3">
+                        <span class="tbr-text">Add to TBR</span>
+                        <span class="tbr-icon">✓</span>
+                    </button>
+                </div>
+                <div class="book-column" data-keywords="harry potter goblet fire jk rowling fantasy magic wizard hogwarts tournament" data-isbn="9780439139601" data-book-id="hp4">
+                    <img src="assets/images/placeholder-book.jpg" alt="Harry Potter and the Goblet of Fire" class="book-cover">
+                    <h3>Harry Potter and the Goblet of Fire</h3>
+                    <p class="author">by J.K. Rowling</p>
+                    <p>Harry competes in the dangerous Triwizard Tournament while Voldemort's return grows stronger.</p>
+                    <button class="tbr-btn" data-book-id="hp4">
+                        <span class="tbr-text">Add to TBR</span>
+                        <span class="tbr-icon">✓</span>
+                    </button>
+                </div>
+                <div class="book-column" data-keywords="harry potter order phoenix jk rowling fantasy magic wizard hogwarts ministry" data-isbn="9780439358071" data-book-id="hp5">
+                    <img src="assets/images/placeholder-book.jpg" alt="Harry Potter and the Order of the Phoenix" class="book-cover">
+                    <h3>Harry Potter and the Order of the Phoenix</h3>
+                    <p class="author">by J.K. Rowling</p>
+                    <p>Harry faces disbelief about Voldemort's return while forming Dumbledore's Army to fight against darkness.</p>
+                    <button class="tbr-btn" data-book-id="hp5">
+                        <span class="tbr-text">Add to TBR</span>
+                        <span class="tbr-icon">✓</span>
+                    </button>
+                </div>
+                <div class="book-column" data-keywords="harry potter half blood prince jk rowling fantasy magic wizard hogwarts horcrux" data-isbn="9780439785969" data-book-id="hp6">
+                    <img src="assets/images/placeholder-book.jpg" alt="Harry Potter and the Half-Blood Prince" class="book-cover">
+                    <h3>Harry Potter and the Half-Blood Prince</h3>
+                    <p class="author">by J.K. Rowling</p>
+                    <p>Harry learns about Voldemort's past through memories while discovering the secret to defeating him.</p>
+                    <button class="tbr-btn" data-book-id="hp6">
+                        <span class="tbr-text">Add to TBR</span>
+                        <span class="tbr-icon">✓</span>
+                    </button>
+                </div>
+                <div class="book-column" data-keywords="harry potter deathly hallows jk rowling fantasy magic wizard hogwarts horcrux voldemort" data-isbn="9780545010221" data-book-id="hp7">
+                    <img src="assets/images/placeholder-book.jpg" alt="Harry Potter and the Deathly Hallows" class="book-cover">
+                    <h3>Harry Potter and the Deathly Hallows</h3>
+                    <p class="author">by J.K. Rowling</p>
+                    <p>The epic conclusion as Harry, Ron, and Hermione search for Horcruxes to defeat Voldemort once and for all.</p>
+                    <button class="tbr-btn" data-book-id="hp7">
+                        <span class="tbr-text">Add to TBR</span>
+                        <span class="tbr-icon">✓</span>
+                    </button>
+                </div>
+                <div class="book-column" data-keywords="hidden potential adam grant psychology potential talent growth mindset development" data-isbn="9780593653142" data-title="Hidden Potential" data-author="Adam Grant" data-book-id="hidden-potential">
+                    <img src="assets/images/placeholder-book.jpg" alt="Hidden Potential" class="book-cover">
+                    <h3>Hidden Potential</h3>
+                    <p class="author">by Adam Grant</p>
+                    <p>Explores how to unlock untapped potential in ourselves and others, challenging myths about talent and ability.</p>
+                    <button class="tbr-btn" data-book-id="hidden-potential">
+                        <span class="tbr-text">Add to TBR</span>
+                        <span class="tbr-icon">✓</span>
+                    </button>
+                </div>
+                <div class="book-column" data-keywords="outliers malcolm gladwell success psychology 10000 hours practice talent" data-isbn="9780316017930" data-title="Outliers: The Story of Success" data-author="Malcolm Gladwell" data-book-id="outliers">
+                    <img src="assets/images/placeholder-book.jpg" alt="Outliers" class="book-cover">
+                    <h3>Outliers</h3>
+                    <p class="author">by Malcolm Gladwell</p>
+                    <p>Examines the factors that contribute to high levels of success, revealing the hidden advantages behind extraordinary achievement.</p>
+                    <button class="tbr-btn" data-book-id="outliers">
+                        <span class="tbr-text">Add to TBR</span>
+                        <span class="tbr-icon">✓</span>
+                    </button>
+                </div>
+                <div class="book-column" data-keywords="digital minimalism cal newport technology focus social media distraction productivity" data-isbn="9780525536512" data-title="Digital Minimalism: Choosing a Focused Life in a Noisy World" data-author="Cal Newport" data-book-id="digital-minimalism">
+                    <img src="assets/images/placeholder-book.jpg" alt="Digital Minimalism" class="book-cover">
+                    <h3>Digital Minimalism</h3>
+                    <p class="author">by Cal Newport</p>
+                    <p>A philosophy for living better with technology by being more selective about digital tools and reducing digital clutter.</p>
+                    <button class="tbr-btn" data-book-id="digital-minimalism">
+                        <span class="tbr-text">Add to TBR</span>
+                        <span class="tbr-icon">✓</span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -72,9 +283,16 @@
             </div> 
         
             <button id="submit-contact" type="submit">Submit</button>
+            
+            <!-- Form Status Message -->
+            <div id="form-status" class="form-status"></div>
         </form>
     </section>
     </main>
+    
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="toast-container"></div>
+    
     <button id="theme-toggle" type="button" aria-label="Toggle color mode">
         <svg class="icon sun" viewBox="0 0 24 24" aria-hidden="true">
             <circle cx="12" cy="12" r="5"></circle>

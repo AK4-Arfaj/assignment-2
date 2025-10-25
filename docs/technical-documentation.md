@@ -1,47 +1,59 @@
 # Technical Documentation
 
 ## Overview
-This portfolio site is a static, single-page application that highlights personal information, selected projects, and a contact form. The page is structured semantically, styled with a responsive CSS layout, and enhanced with a JavaScript-powered light/dark theme toggle that respects user preferences.
+This is a personal portfolio website for Alshayma Alarfaj, a computer science student at KFUPM. The site is a static, single-page application featuring multiple sections including a real-time clock, personal information, interests, skills, projects, book recommendations, and a contact form. The site includes responsive design and a dark/light theme toggle.
 
 ## File Structure
-- `index.html` – Main document that wires together navigation, hero/about, projects, contact form, and the theme toggle button.
-- `css/styles.css` – Global reset plus responsive layouts for phones, tablets, and desktops, component styling, and dark-mode overrides.
-- `js/script.js` – Theme persistence logic that syncs the UI with local storage and the user’s `prefers-color-scheme`.
-- `assets/` – Images used in the about and projects sections.
+- `index.html` – Main document containing navigation, clock section, about me, interests, skills, projects, books, and contact form
+- `css/styles.css` – Responsive styling with mobile-first design and dark mode support
+- `js/script.js` – Theme toggle functionality and real-time clock with typing effects
+- `assets/images/` – Personal photos and placeholder images for books and projects
 
 ## HTML Layout (`index.html`)
-- `<nav>` provides in-page anchors to the three primary sections and is fixed to the top of the viewport for quick access.
-- `<main>` contains three `<section>` elements:
-  - `#about-me` displays the hero name, a portrait (`#my_picture`), and an introductory paragraph grouped inside `#intro`.
-  - `#projects` lists highlighted work in `#projects-grid`, which arranges `.project-column` cards with image, title, and description.
-  - `#contact` wraps a POST-ready form (`#contact-form`) with labeled text inputs and a textarea.
-- A `<button id="theme-toggle">` hosts inline SVG icons for sun/moon states and triggers the color-mode switch.
-- `<script src="js/script.js">` is loaded at the bottom of `<body>` to initialize theme behavior after the DOM is parsed.
+- `<nav>` provides fixed navigation with anchors to six main sections: About Me, Interests, Skills, Projects, Books, and Contact
+- `<main>` contains six primary `<section>` elements:
+  - `#clock-section` displays a real-time clock with typing animation and hero image
+  - `#about-me` contains personal introduction and profile information
+  - `#interests` showcases four interest areas with icon cards (Web Development, App Development, Game Development, Cybersecurity)
+  - `#skills` displays technical skills in a grid layout (HTML, CSS, JavaScript, React, SQL, R, Python, etc.)
+  - `#projects` features project showcase in a responsive grid
+  - `#books` displays book recommendations with "Add to TBR" functionality
+  - `#contact` contains a contact form with name, email, and message fields
+- Theme toggle button with SVG sun/moon icons for dark/light mode switching
+- Toast notification container for user feedback
 
 ## Styling System (`css/styles.css`)
-- Imports Google Fonts and applies a global reset (font, margin, padding, `box-sizing`).
-- Defines three responsive breakpoints:
-  - ≤599 px: single-column layout, stacked project cards, and full-width form controls.
-  - 600–1024 px: two-column project grid, adjusted image sizing, and tablet-friendly spacing.
-  - ≥1025 px: centers the main content, expands project grid gap, and constrains form width.
-- Component styles cover navigation appearance, section spacing, project card visuals, form alignment (`.form-input-row`), and the floating theme toggle button.
-- Dark mode is implemented via `body.dark-mode`, flipping background, text, card, form, button, and toggle colors while keeping hover/focus states distinct.
+- Uses Google Fonts (Epilogue and Poppins) for typography
+- Implements mobile-first responsive design with three breakpoints:
+  - ≤599px: Single-column layout for mobile devices
+  - 600-1024px: Tablet layout with adjusted spacing and grid layouts
+  - ≥1025px: Desktop layout with centered content and expanded grids
+- Dark mode implementation using `body.dark-mode` class
+- Component-specific styling for cards, grids, forms, and interactive elements
+- Smooth transitions for theme switching and hover effects
 
 ## JavaScript Behavior (`js/script.js`)
-- Grabs the `#theme-toggle` element and defines a `STORAGE_KEY` (`site-theme`).
-- On load:
-  - Detects the system preference (`prefers-color-scheme`) and checks `localStorage`.
-  - Applies the saved theme or falls back to the preferred scheme using `applyTheme`.
-- `applyTheme(theme)` toggles the `dark-mode` class on `<body>` and updates the toggle’s `aria-pressed` attribute for accessibility.
-- Click handler switches between `dark` and `light`, updates the DOM, and persists the choice in `localStorage`.
+- **Theme Toggle**: Detects system preferences, manages localStorage persistence, and applies dark/light mode
+- **Real-time Clock**: Displays current time with typing/erasing animation effects
+- **Interactive Elements**: Handles form submissions, toast notifications, and book TBR (To Be Read) functionality
+- **Accessibility**: Maintains proper ARIA attributes and keyboard navigation support
 
-## Assets & Accessibility
-- Portrait and project images reside under `assets/images/`; ensure matching filenames when replacing imagery.
-- All interactive elements (nav links, buttons, form fields) remain keyboard-accessible. The theme toggle advertises its state via `aria-pressed`, and focus outlines are preserved.
-- Maintain descriptive `alt` text on images and labels on form controls for assistive technologies.
+## Key Features
+- **Real-time Clock**: Animated clock display with typing effect showing current time
+- **Responsive Design**: Optimized for mobile, tablet, and desktop viewing
+- **Theme Toggle**: Persistent dark/light mode with system preference detection
+- **Interactive Cards**: Hover effects on interest and skill cards
+- **Book Recommendations**: Harry Potter series and tech books with TBR functionality
+- **Contact Form**: Form validation and status messaging (frontend only)
 
-## Extending the Site
-- Add new sections by following the existing semantic structure and updating navigation anchors.
-- Introduce additional project cards by cloning `.project-column` markup and relying on the grid/flex utilities already defined.
-- If adding new theme variants, extend `applyTheme` and the corresponding CSS selectors while keeping state in `localStorage`.
+## Setup Instructions
+1. Download or clone the repository
+2. Open `index.html` in any modern web browser
+3. Navigate using the fixed navigation bar at the top
+4. Contact form is frontend-only (backend not implemented)
+
+## Browser Compatibility
+- Supports modern browsers with CSS Grid and Flexbox
+- Requires JavaScript for theme toggle and clock functionality
+- Uses CSS custom properties for theming
 

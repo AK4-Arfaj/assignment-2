@@ -1,16 +1,80 @@
-# Project Description:
-A simple portoflio project for: Alshayma Alarfaj that only implements the front-end, using the web-languages, HTML, CSS, JS.
+# Alshayma Alarfaj - Portfolio Website
 
-# Setup instructions (how to run locally)
-- Download this repository or clone it. 
-- Then right click the index.html file and open with a browser of your choosing.
-- Now the website should be open
-- You can click on any category on the navigation on the top of the page to move to the section of the page you are looking for
-- For the contact form, fill in the fields and click the submit button to send a message to me, Alshayma Alarfaj (backend not yet implemented)
+A modern, responsive portfolio website showcasing the work and interests of Alshayma Alarfaj, a Computer Science student at KFUPM. The site features a clean design with dark/light theme toggle, real-time clock animation, and interactive sections highlighting skills, projects, and book recommendations.
 
+## Features
 
-# Short summary of AI use
-Used ChatGPT and Codex for debugging, suggestions, and code generation.
+- **Real-time Clock**: Animated typing effect displaying current time
+- **Responsive Design**: Optimized for mobile, tablet, and desktop devices
+- **Dark/Light Theme Toggle**: Persistent theme switching with system preference detection
+- **Interactive Sections**: About Me, Interests, Skills, Projects, Books, and Contact
+- **Book Recommendations**: Personal reading list with "To Be Read" functionality
+- **Contact Form**: Frontend contact form with validation (backend pending)
 
-# Optional live deployment link
-TBD
+## Technologies Used
+
+- **HTML5**: Semantic markup and accessibility features
+- **CSS3**: Responsive design with Flexbox/Grid, custom properties, and animations
+- **JavaScript**: Theme management, real-time clock, and interactive features
+- **Google Fonts**: Poppins and Epilogue typography
+
+## Setup Instructions
+
+### Running Locally
+1. **Download or Clone Repository**
+   ```bash
+   git clone https://github.com/AK4-Arfaj/assignment-2.git
+   ```
+
+2. **Open in Browser**
+   - Navigate to the project folder
+   - Right-click on `index.html` and select "Open with" your preferred browser
+   - Alternatively, drag `index.html` into your browser window
+
+3. **Navigate the Site**
+   - Use the fixed navigation bar to jump between sections
+   - Try the theme toggle button (sun/moon icon) to switch between light and dark modes
+   - Explore the interactive book recommendations and contact form
+
+### File Structure
+```
+├── index.html          # Main HTML file
+├── css/
+│   └── styles.css      # Responsive styling and themes
+├── js/
+│   └── script.js       # Interactive functionality
+├── assets/
+│   └── images/         # Photos and placeholder images
+└── docs/
+    └── technical-documentation.md
+```
+
+## Browser Compatibility
+
+- Modern browsers with CSS Grid and Flexbox support
+- JavaScript enabled for theme toggle and clock functionality
+- Responsive design tested on mobile, tablet, and desktop viewports
+
+## Development Notes
+
+- **Frontend Only**: This is a static website with no backend implementation
+- **Contact Form**: Currently frontend-only, form submissions are not processed
+- **Images**: Placeholder images used for some content sections
+
+## AI Usage Summary
+
+AI tools (ChatGPT and GitHub Codex) were utilized for:
+- Code debugging and optimization
+- Implementation suggestions and best practices
+- Feature development assistance
+
+## Future Enhancements
+
+- Backend integration for contact form processing
+- Project showcase with live demos
+- Blog section for technical articles
+- Enhanced animations and micro-interactions
+
+## Live Demo
+
+🔗 **Live Site**: TBD (Deployment pending)
