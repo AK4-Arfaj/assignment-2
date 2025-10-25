@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Chivo:ital,wght@0,100..900;1,100..900&family=Great+Vibes&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 * {
     font-family: Poppins, sans-serif;
     margin: 0;
@@ -419,4 +419,187 @@ body.dark-mode label {
 
 body.dark-mode #theme-toggle {
     background-color: #2a3fcc;
+}
+
+/* Real-time Clock Styles - Hero Section */
+#clock-section {
+    display: flex;
+    justify-content: space-between; /* Space between text and image */
+    align-items: center;
+    padding: 6rem 4rem; /* Increased padding for more breathing room */
+    margin-top: 80px; /* Account for fixed nav */
+    min-height: 60vh; /* Hero section height */
+    background: linear-gradient(135deg, rgba(63, 63, 206, 0.05) 0%, rgba(2, 6, 45, 0.02) 100%);
+    gap: 4rem; /* Space between text and image */
+    border-radius: 30px; /* Smooth rounded corners */
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+#clock-container {
+    text-align: left; /* Left align text */
+    font-family: 'Epilogue', sans-serif;
+    flex: 1; /* Take available space */
+    line-height: 1.2;
+}
+
+#hero-image-container {
+    flex: 0 0 auto; /* Don't grow or shrink */
+    display: flex;
+    align-items: center;
+}
+
+#hero_picture {
+    max-width: none;
+    max-height: 600px; /* Almost as tall as the large text (5rem ≈ 80px per line × 4 lines + spacing) */
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 20px;
+    border: solid 3px rgb(63, 63, 206);
+    box-shadow: 0 10px 30px rgba(63, 63, 206, 0.2);
+}
+
+
+
+#current-time {
+    font-family: 'Epilogue', sans-serif;
+    display: block;
+    font-size: 5rem; /* Large hero size */
+    font-weight: 900; /* Even bolder */
+    color: rgb(63, 63, 206);
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.05em;
+    position: relative;
+    min-height: 1.2em; /* Prevent layout shift */
+}
+
+#current-time::after {
+    content: '|';
+    color: rgb(63, 63, 206);
+    animation: blink 1s infinite;
+    margin-left: 0.1em;
+}
+
+@keyframes blink {
+    0%, 50% {
+        opacity: 1;
+    }
+    51%, 100% {
+        opacity: 0;
+    }
+}
+
+#clock-message {
+    font-family: 'Epilogue', sans-serif;
+    display: block;
+    font-size: 5rem; /* Same size as time */
+    font-weight: 900; /* Even bolder */
+    color: rgb(2, 6, 45);
+    line-height: 1.1;
+}
+
+.name-highlight {
+    color: rgb(63, 63, 206); /* Blue color matching the time */
+    font-weight: 300; /* Thin weight */
+}
+
+/* Dark mode styles for clock */
+body.dark-mode #current-time {
+    color: #00d4ff; /* Cool cyan-blue */
+}
+
+body.dark-mode #current-time::after {
+    color: #00d4ff; /* Cool cyan-blue cursor */
+}
+
+body.dark-mode #clock-message {
+    color: #f1f5ff;
+}
+
+body.dark-mode .name-highlight {
+    color: #00d4ff; /* Cool cyan-blue matching the time in dark mode */
+}
+
+body.dark-mode #clock-section {
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.08) 0%, rgba(241, 245, 255, 0.03) 100%);
+}
+
+body.dark-mode #hero_picture {
+    border-color: #00d4ff; /* Cool cyan-blue */
+    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
+}
+
+body.dark-mode #hero_picture:hover {
+    box-shadow: 0 15px 40px rgba(0, 212, 255, 0.3);
+}
+
+/* Responsive design for clock */
+@media (max-width: 599px) {
+    #clock-section {
+        flex-direction: column; /* Stack vertically on mobile */
+        text-align: center;
+        margin-top: 60px;
+        min-height: 50vh;
+        padding: 4rem 2rem; /* Increased mobile padding */
+        gap: 2rem;
+        border-radius: 20px; /* Smaller radius for mobile */
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    
+    #clock-container {
+        text-align: center; /* Center on mobile */
+        order: 1; /* Text first */
+    }
+    
+    #hero-image-container {
+        order: 2; /* Image second (below text) */
+        display: flex;
+        justify-content: center; /* Center the image */
+        align-items: center;
+    }
+    
+    #hero_picture {
+        max-width: 90%; /* Almost as wide as the text container on mobile */
+        max-height: none;
+        width: auto;
+        height: auto;
+        border-radius: 15px;
+    }
+    
+    #current-time {
+        font-size: 2.8rem;
+    }
+    
+    #clock-message {
+        font-size: 2.8rem;
+        line-height: 1.1;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+    #clock-section {
+        min-height: 55vh;
+        padding: 5rem 3rem; /* Increased tablet padding */
+        gap: 3rem;
+        border-radius: 25px; /* Medium radius for tablet */
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+    
+    #hero_picture {
+        max-width: none;
+        max-height: 450px; /* Scaled for tablet text size (4rem) */
+        width: auto;
+        height: auto;
+    }
+    
+    #current-time {
+        font-size: 4rem;
+    }
+    
+    #clock-message {
+        font-size: 4rem;
+    }
 }
