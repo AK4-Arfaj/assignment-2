@@ -47,6 +47,7 @@ A modern, responsive portfolio website showcasing the work and interests of Alsh
 │   └── images/         # Photos and placeholder images
 └── docs/
     └── technical-documentation.md
+    └── ai-usage-report.md
 ```
 
 ## Browser Compatibility
